@@ -2,6 +2,7 @@ const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 const telephoneInput = document.getElementById("telephone");
 const emailInput = document.getElementById("email");
+const showPassword = document.querySelector('#showPassword');
 
 /**
  * 
@@ -76,3 +77,15 @@ telephoneInput.addEventListener("blur", e => {
 });
 
 emailInput.addEventListener("input", createListener(isValidEmail));
+
+// Toggle password visibility when the "Show Password" checkbox is clicked
+showPassword.addEventListener('change', () => {
+  passwordInput.type = showPassword.checked ? 'text' : 'password';
+});
+
+
+
+
+
+
+
